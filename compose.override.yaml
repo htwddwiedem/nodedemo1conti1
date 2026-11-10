@@ -1,0 +1,8 @@
+# Entwicklung: wird automatisch zu compose.yaml hinzugeladen
+services:
+  web:
+    command: node --watch server.js
+    volumes:
+      - ./server.js:/app/server.js
+    ports: !override
+      - "127.0.0.1:3000:3000"
